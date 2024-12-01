@@ -1,0 +1,92 @@
+/* Container Styling */
+.certification-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .certification-header {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  /* Table Styling */
+  .certification-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .certification-table thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .certification-table th,
+  .certification-table td {
+    text-align: left;
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  
+  .certification-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Action Buttons */
+  .action-button {
+    padding: 8px 12px;
+    margin: 0 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-button.approve {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .action-button.approve:hover {
+    background-color: #45a049;
+  }
+  
+  .action-button.reject {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .action-button.reject:hover {
+    background-color: #d32f2f;
+  }
+  
+  /* Message Styling */
+  .no-requests-message {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .error-message {
+    color: #f44336;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  

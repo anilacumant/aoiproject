@@ -1,0 +1,63 @@
+.certification-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certification-header {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.certification-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.certification-table th,
+.certification-table td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #ddd;
+    color: #000; /* Set text color to black for better visibility */
+}
+
+.certification-table th {
+    background-color: #4caf50;
+    color: white; /* Keep the header text white for contrast */
+}
+
+.certification-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+.apply-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.certification-input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.apply-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply-button:hover {
+    background-color: #45a049;
+}

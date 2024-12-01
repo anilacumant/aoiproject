@@ -1,0 +1,47 @@
+.team-management-container {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 100vh;
+}
+
+.team-management-header {
+    font-size: 2rem;
+    color: #45f3ff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+.employee-table th {
+    background-color: black;
+    color: #ffffff;
+}
+
+.employee-table td {
+    background-color: black;
+}
+
+.employee-table tr:hover {
+    background-color: #333333;
+}
+
+.no-employees-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #ff4c4c;
+}

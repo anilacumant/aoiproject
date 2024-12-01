@@ -6,6 +6,8 @@ import TrainingProgress from "./TrainingProgress";
 import Feedback from "./Feedback";
 import LeaveManagement from "./LeaveManagement";
 import LearningResources from "./LearningResources";
+import EmployeeCerifications from "./EmployeeCertifications";
+import CompetencyTracker from "./CompetencyTracker.js";
 
 const EmployeeDashboard = () => {
   const [activeTab, setActiveTab] = useState("Dashboard");
@@ -26,6 +28,10 @@ const EmployeeDashboard = () => {
         return <LeaveManagement />;
       case "LearningResources":
         return <LearningResources />;
+      case "CompetencyTracker":
+        return <CompetencyTracker />;
+      case "EmployeeCerifications":
+          return <EmployeeCerifications />;
       default:
         return <h3 className="dashboard-title">Welcome to Your Dashboard</h3>;
     }
@@ -43,6 +49,9 @@ const EmployeeDashboard = () => {
           "Feedback",
           "LeaveManagement",
           "LearningResources",
+          "CompetencyTracker",
+          "EmployeeCerifications"
+
         ].map((tab) => (
           <button
             key={tab}
