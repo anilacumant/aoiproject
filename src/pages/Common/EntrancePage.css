@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background: radial-gradient(circle, #101010 0%, #000000 100%);
+  color: #fff;
+}
+
+.entrance-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #101010;
+  border-bottom: 1px solid #333;
+}
+
+.nav-bar h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.nav-bar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.nav-bar nav a:hover {
+  color: #fff;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffffff, #b3b3b3 50%, #666666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  margin: 10px 0 30px;
+  font-size: 1.2rem;
+  color: #b3b3b3;
+}
+
+.role-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.role-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  background-color: #222;
+  color: #d4d4d4;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 0 10px;
+}
+
+.role-button:hover {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.hr-button {
+  background-color: #111;
+  color: #e74c3c;
+}
+
+.hr-button:hover {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.manager-button {
+  background-color: #111;
+  color: #3498db;
+}
+
+.manager-button:hover {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.employee-button {
+  background-color: #111;
+  color: #2ecc71;
+}
+
+.employee-button:hover {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: #101010;
+  color: #666;
+}
