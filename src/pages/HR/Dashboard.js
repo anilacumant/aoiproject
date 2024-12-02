@@ -1,12 +1,64 @@
-import React from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useState } from "react";
+import "./HRDashboard.css"; // Use the same CSS structure or adapt from EmployeeDashboard.css
+import EmployeeList from "./EmployeeList";
+import LeaveRequests from "./LeaveRequests";
+import Competencies from "./Competencies";
+import TrainingAnalytics from "./TrainingAnalytics";
+import FeedbackAnalysis from "./FeedbackAnalysis";
 
 const HRDashboard = () => {
+  const [activeTab, setActiveTab] = useState("Dashboard");
+
+  const renderActiveTab = () => {
+    switch (activeTab) {
+      case "Dashboard":
+        return (
+          <h3 className="dashboard-title">
+            Welcome to the HR Dashboard
+          </h3>
+        );
+      case "EmployeeList":
+        return <EmployeeList />;
+      case "LeaveRequests":
+        return <LeaveRequests />;
+      case "Competencies":
+        return <Competencies />;
+      case "TrainingAnalytics":
+        return <TrainingAnalytics />;
+      case "FeedbackAnalysis":
+        return <FeedbackAnalysis />;
+      default:
+        return (
+          <h3 className="dashboard-title">
+            Welcome to the HR Dashboard
+          </h3>
+        );
+    }
+  };
+
   return (
-    <Container className="mt-5">
-      <h1>HR Dashboard</h1>
-      <p>Welcome to the HR portal!</p>
-    </Container>
+    <div className="dashboard-container">
+      <header className="dashboard-header">HR Dashboard</header>
+      <nav className="dashboard-tabs">
+        {[
+          "Dashboard",
+          "EmployeeList",
+          "LeaveRequests",
+          "Competencies",
+          "TrainingAnalytics",
+          "FeedbackAnalysis",
+        ].map((tab) => (
+          <button
+            key={tab}
+            className={`tab-button ${activeTab === tab ? "active" : ""}`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab.replace(/([A-Z])/g, " $1")} {/* Format as readable titles */}
+          </button>
+        ))}
+      </nav>
+      <div className="tab-content">{renderActiveTab()}</div>
+    </div>
   );
 };
 
