@@ -1,0 +1,72 @@
+.employee-list-container {
+    padding: 20px;
+}
+
+.employee-list-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.add-employee-button,
+.edit-button,
+.delete-button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.add-employee-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #e0e0e0;
+}
+
+.add-employee-button {
+    margin-bottom: 20px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.employee-table th,
+.employee-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.employee-table th {
+    background-color: #f4f4f4;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+}
+
+.modal-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}

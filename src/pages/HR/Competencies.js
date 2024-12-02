@@ -14,7 +14,7 @@ const Competencies = () => {
   });
   const [error, setError] = useState("");
 
-  // Fetch competencies on load
+  // Fetch all competencies
   useEffect(() => {
     const fetchCompetencies = async () => {
       try {
@@ -28,7 +28,7 @@ const Competencies = () => {
     fetchCompetencies();
   }, []);
 
-  // Open modal to add or edit a competency
+  // Open modal for adding or editing
   const handleOpenModal = (competency = null) => {
     if (competency) {
       setFormState({
@@ -55,16 +55,13 @@ const Competencies = () => {
     e.preventDefault();
     try {
       if (formState.id) {
-        // Update existing competency
         await axios.put(
           `http://127.0.0.1:5000/api/competencies/${formState.id}`,
           formState
         );
       } else {
-        // Add new competency
         await axios.post("http://127.0.0.1:5000/api/competencies", formState);
       }
-      // Refresh competencies list
       const response = await axios.get("http://127.0.0.1:5000/api/competencies");
       setCompetencies(response.data);
       setShowModal(false);
@@ -75,12 +72,9 @@ const Competencies = () => {
 
   return (
     <div className="competencies-container">
-      <header className="competencies-header">Manage Competencies</header>
+      <header className="competencies-header">Competencies Management</header>
       {error && <div className="error-message">{error}</div>}
-      <button
-        className="add-button"
-        onClick={() => handleOpenModal()}
-      >
+      <button className="add-button" onClick={() => handleOpenModal()}>
         Add Competency
       </button>
       <table className="competencies-table">
@@ -101,7 +95,7 @@ const Competencies = () => {
               <td>{competency.name}</td>
               <td>{competency.description}</td>
               <td>{competency.type}</td>
-              <td>{competency.expiry_date}</td>
+              <td>{competency.expiry_date || "N/A"}</td>
               <td>
                 <button
                   className="action-button edit"

@@ -1,0 +1,46 @@
+.hr-portal-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .hr-portal-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hr-portal-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .hr-portal-table th,
+  .hr-portal-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .hr-portal-table th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .action-button.notify {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .action-button.notify:hover {
+    background-color: #218838;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 20px;
+  }
+  
