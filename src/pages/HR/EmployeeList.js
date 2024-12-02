@@ -15,6 +15,7 @@ const EmployeeList = () => {
     });
     const [error, setError] = useState("");
 
+    // Fetch employees and managers on component mount
     useEffect(() => {
         fetchEmployees();
         fetchManagers();
@@ -33,7 +34,7 @@ const EmployeeList = () => {
 
     const fetchManagers = async () => {
         try {
-            const response = await axios.get("http://127.0.0.1:5000/api/managers/");
+            const response = await axios.get("http://127.0.0.1:5000/api/users/managers/");
             setManagers(response.data);
             console.log("Managers fetched:", response.data);
         } catch (err) {
@@ -69,12 +70,14 @@ const EmployeeList = () => {
         console.log("Submitting form with state:", formState);
         try {
             if (formState.id) {
+                // Update employee
                 await axios.put(
                     `http://127.0.0.1:5000/api/employees/${formState.id}`,
                     formState
                 );
                 console.log("Employee updated:", formState.id);
             } else {
+                // Add new employee
                 await axios.post("http://127.0.0.1:5000/api/employees/", formState);
                 console.log("New employee added:", formState);
             }
@@ -82,7 +85,7 @@ const EmployeeList = () => {
             setShowModal(false);
         } catch (err) {
             setError("Failed to save employee.");
-            console.error(err);
+            console.error("Error in handleSubmit:", err.response || err);
         }
     };
 
