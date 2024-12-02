@@ -1,0 +1,36 @@
+.feedback-container {
+    padding: 20px;
+  }
+  
+  .feedback-header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: green;
+  }
+  
+  .feedback-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .feedback-table th,
+  .feedback-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    color: white;
+    
+  }
+  
+  .feedback-table th {
+    background-color: #f4f4f4;
+    color: black;
+  }
+  
+  .no-feedback-message {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+  }
+  

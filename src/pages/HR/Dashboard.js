@@ -20,8 +20,8 @@ const HRDashboard = () => {
         return <LeaveRequests />;
       case "Competencies":
         return <Competencies />;
-      case "TrainingAnalytics":
-        return <TrainingAnalytics />;
+      // case "TrainingAnalytics":
+      //   return <TrainingAnalytics />;
       case "FeedbackAnalysis":
         return <FeedbackAnalysis />;
       case "CertificationOverview": // Add new case for Certification Overview
@@ -40,7 +40,6 @@ const HRDashboard = () => {
           "EmployeeList",
           "LeaveRequests",
           "Competencies",
-          "TrainingAnalytics",
           "FeedbackAnalysis",
           "CertificationOverview", // Add CertificationOverview to tabs
         ].map((tab) => (
